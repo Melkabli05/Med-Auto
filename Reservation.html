@@ -7,10 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="reservation.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">    <title>Document</title>
 </head>
 
 <body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Med-auto</label>
+        <ul>
+            <li><a class="active" href="INdex.html">Home</a></li>
+            <li><a href="collections.html">Category</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="#">Reservation</a></li>
+        </ul>
+    </nav>
     <section>
         <form name="formulaire" class="select">
             <select name="véhicule">
@@ -40,8 +55,39 @@
             <input type="number">
         </form>
 
-        <button>CALC</button>
+        <button>price</button>
     </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script>
 
@@ -106,11 +152,11 @@
 
     });
 
-    document.querySelector("body > button").addEventListener('click', function () {
+    document.querySelector("body > section > button").addEventListener('click', function () {
         // get value of select tags
-        let cars = document.querySelector("body > form > select:nth-child(1)").value;
-        let carcarburant = document.querySelector("body > form > select:nth-child(2)").value;
-        let day = document.querySelector("body > form > input[type=number]").value;
+        let cars = document.querySelector("body > section > form > select:nth-child(1)").value;
+        let carcarburant = document.querySelector("body > section > form > select:nth-child(2)").value;
+        let day = document.querySelector("body > section > form > input[type=number]").value;
         let price;
         console.log(cars);
         console.log(carcarburant);
@@ -196,7 +242,8 @@
 
         price = price * day;
         console.log(price);
-        alert(price)
+        // alert(price)
+        alert('Price', 'is : ' + price, 'success')
 
     });
 </script>
