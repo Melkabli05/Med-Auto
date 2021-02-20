@@ -226,8 +226,13 @@ ul{
 .copyright p{
     margin: 0;
 }
-@media screen and (max-width: 375px)
-.collections img {
-    width: 375px !important;
+@media screen and (max-width: 375px){
+  .container .reserve-box .box {
+    margin-right: 0px;
+    margin-bottom: 10px;
 }
+}
+/* .collections img {
+    width: 375px !important;
+} */
     

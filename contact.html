@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-   <!-- basic -->
-   <meta charset="utf-8">
+   <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact us</title>
    <link rel="stylesheet" href="contact.css">
-   <link href="fontawesome/css/all.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
-<!-- body -->
 
-<body class="main-layout Books-bg">
+<body>
+
    <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -24,63 +25,32 @@
          <li><a class="active" href="INdex.html">Home</a></li>
          <li><a href="collections.html">Category</a></li>
          <li><a href="contact.html">Contact us</a></li>
-         <li><a href="#">Reservation</a></li>
+         <li><a href="Reservation.html">Reservation</a></li>
       </ul>
    </nav>
 
    <section>
-      <div class="content">
-         <H1>Contact us</H1>
+      <div class="contact-form">
+         <h1>Contact Us</h1>
+         <div class="txtb">
+            <label>Full Name :</label>
+            <input type="text" name="" value="" placeholder="Enter Your Name">
+         </div>
 
-      </div>
-      <div class="container1">
-         <div class="contact-info">
-            <div class="box">
-               <i class="fas fa-map-marker-alt"></i>
-               <div class="text">
-                  <h3>Address</h3>
-                  <p>4671 Sugar Camp Road,<br>Owatonna,Minnesota,<br>55060</p>
-               </div>
-            </div>
-            <div class="box">
-               <i class="fa fa-phone" aria-hidden="true"></i>
-               <div class="text">
-                  <h3>Phone</h3>
-                  <p>0696673330</p>
-               </div>
-            </div>
-            <div class="box">
-               <i class="fas fa-envelope"></i>
-               <div class="text">
-                  <h3>Email</h3>
-                  <p>Melkabli05@gmail.com</p>
-               </div>
-            </div>
+         <div class="txtb">
+            <label>Email :</label>
+            <input type="email" name="" value="" placeholder="Enter Your Email">
          </div>
-         <div class="contact-from">
-            <form action="">
-               <h2>Send Message</h2>
-               <div class="input-box">
-                  <input type="text" name="" required="required">
-                  <span>Full Name</span>
-               </div>
-               <div class="input-box">
-                  <input type="text" name="" required="required">
-                  <span>Email</span>
-               </div>
-               <div class="input-box">
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
-                  <span>Type Your Message...</span>
-               </div>
-               <div class="input-box">
-                  <input type="submit" name="" required="Send">
-               </div>
-            </form>
+
+         <div class="txtb">
+            <label>Message :</label>
+            <textarea></textarea>
          </div>
+         <a class="btn">Send</a>
       </div>
    </section>
    <footer class="footer">
-      <div class="container">
+      <div class="container3">
          <div class="row">
             <div class="footer-col">
                <h4>company</h4>
@@ -95,9 +65,11 @@
                <h4>get help</h4>
                <ul>
                   <li><a href="#">FAQ</a></li>
+
                   <li><a href="#">payment options</a></li>
                </ul>
             </div>
+
             <div class="footer-col">
                <h4>follow us</h4>
                <div class="social-links">
@@ -108,22 +80,24 @@
                </div>
             </div>
          </div>
+         <div class="copyright">
+            <p>Empire Med-auto © 2021 All rights reserved.</p>
+         </div>
       </div>
    </footer>
-   <!-- javascript -->
-   <script>
-      let name = document.querySelector("body > section > div.container1 > div.contact-from > form > div:nth-child(2) > input[type=text]");
-      let email = document.querySelector("body > section > div.container1 > div.contact-from > form > div:nth-child(3) > input[type=text]");
-      let message = document.querySelector("body > section > div.container1 > div.contact-from > form > div:nth-child(4) > textarea");
-      let button = document.querySelector("body > section > div.container1 > div.contact-from > form > div:nth-child(5) > input[type=submit]");
-
-
-      button.addEventListener('click', function () {
-         Swal.fire('Good job!','Bonjour Ms/Mme : ' + name.value + ' votre email est : ' + email.value + ' et votre message : '+ message.value + ' a été bien enregistrer',
-  'success' );
-      });
-
-   </script>
+      <!-- javascript -->
+      <script>
+         let name = document.querySelector("body > section > div > div:nth-child(2) > input[type=text]");
+         let email = document.querySelector("body > section > div > div:nth-child(3) > input[type=email]");
+         let message = document.querySelector("body > section > div > div:nth-child(4) > textarea");
+         let button = document.querySelector("body > section > div > a");
+   
+   
+         button.addEventListener('click', function () {
+            Swal.fire('Good job!','Bonjour Ms/Mme : ' + name.value + ' votre email est : ' + email.value + ' et votre message : '+ message.value + ' a été bien enregistrer','success');
+         });
+   
+      </script>
 </body>
 
 </html>

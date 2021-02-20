@@ -582,10 +582,10 @@ ul{
       margin-top: -60px;
   }
   .definition-img img{
-      width: 375px !important;
+      width: 300px !important;
   }
   .collections img{
-      width: 375px !important;
+      width: 300px !important;
   }
   .collection{
       margin: 0px !important;
@@ -593,14 +593,11 @@ ul{
   .container .med-auto {
       padding: 100px 40px !important;
   }
+  .stars img {
+    width: 20px;
+    height: 20px;
 }
-@media screen and (max-width:500px) {
-  #email{
-    width: 450px !important;
-  }
-  .container .newsletter .newsletter-form button {
-    width: 450px !important;
-  }
 }
+
 /* -------End of footer---------- */
 
